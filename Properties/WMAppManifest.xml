@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="es-ES" />
-  <App xmlns="" ProductID="{8db14df1-4e7d-47b9-8e7a-0c311557b66a}" Title="Conversor Libras" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Pablo Varela" Description="Conversor de libras a euros" Publisher="Pablo Varela" PublisherID="{5a8e433b-8d9b-43e8-bdfb-c8b8dea4fbb5}">
+  <App xmlns="" ProductID="{8db14df1-4e7d-47b9-8e7a-0c311557b66a}" Title="Conversor Libras" RuntimeType="Silverlight" Version="0.9.0.0" Genre="apps.normal" Author="Pablo Varela" Description="Conversor de libras a euros" Publisher="Pablo Varela" PublisherID="{5a8e433b-8d9b-43e8-bdfb-c8b8dea4fbb5}">
     <IconPath IsRelative="true" IsResource="false">Imagenes\logo_small.png</IconPath>
     <Capabilities>
     </Capabilities>
@@ -13,18 +13,17 @@
         <TemplateFlip>
           <SmallImageURI IsRelative="true" IsResource="false">Imagenes\logo_small.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">logo_medium2.png</BackgroundImageURI>
-          <Title>Conversor</Title>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Imagenes\logo_medium.png</BackgroundImageURI>
+          <Title>a</Title>
           <BackContent>
           </BackContent>
-          <BackBackgroundImageURI>
+          <BackBackgroundImageURI IsRelative="true" IsResource="false">
           </BackBackgroundImageURI>
           <BackTitle>
           </BackTitle>
-          <DeviceLockImageURI>
+          <DeviceLockImageURI IsRelative="true" IsResource="false">
           </DeviceLockImageURI>
-          <HasLarge>
-          </HasLarge>
+          <HasLarge>False</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>
