@@ -20,44 +20,38 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- NOTA PARA LA TRADUCCIÓN:
-            Para traducir las cadenas mostradas, copia sus valores a las claves con el nombre
-            correspondiente en el archivo de recursos del idioma neutro (AppResources.resx) de la aplicación y
-            reemplaza el valor de texto codificado de forma rígida entre las comillas de los atributos
-            con la cláusula de enlace cuya ruta de acceso apunte a ese nombre de cadena.
-
-            Por ejemplo:
-
-                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
-
-            Este enlace apunta al recurso de cadena de la plantilla denominado "ApplicationTitle".
-
-            Al agregar idiomas admitidos en la pestaña Propiedades del proyecto se creará un
-            nuevo archivo resx por idioma que puede contener los valores traducidos de las
-            cadenas de la interfaz de usuario. El enlace de estos ejemplos hará que el valor de los atributos
-            se tome del archivo .resx correspondiente al valor de
-            CurrentUICulture de la aplicación en tiempo de ejecución.
-         -->
-
         <!--TitlePanel contiene el nombre de la aplicación y el título de la página-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Cardiff 2013" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
             <TextBlock Text="Conversor" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        <!--ContentPanel. Colocar aquí el contenido adicional-->
+        <!--ContentPanel-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBox x:Name="Datos" HorizontalAlignment="Left" Height="95" Margin="59,24,0,0" FontSize="45" 
+            <!--TexBox donde se insertan los datos-->
+            <TextBox x:Name="Datos" 
+                     HorizontalAlignment="Left" Height="95" Margin="59,24,0,0" FontSize="45" 
                      FlowDirection="RightToLeft" TextWrapping="NoWrap" VerticalAlignment="Top" Width="199">
+                <!--La entrada del teclado sera tipo digital solo con los numeros-->
                 <TextBox.InputScope>
                     <InputScope>
                         <InputScopeName NameValue="Digits"/>
                     </InputScope>
                 </TextBox.InputScope>
             </TextBox>
-            <Button x:Name="Convertir" Content="Convertir" HorizontalAlignment="Right" Margin="0,24,59,0" VerticalAlignment="Top" 
-                    Height="95" Width="153" Click="Convertir_Click"/>
-
+            <!--Button con el evento para realizar la conversion-->
+            <Button x:Name="Convertir" Content="Convertir" 
+                    HorizontalAlignment="Right" Margin="0,24,59,0" VerticalAlignment="Top" 
+                    Height="95" Width="153" 
+                    Click="Convertir_Click"/>
+            <!--TextBlock para el resultado en libras-->
+            <TextBlock x:Name="Libras"
+                       HorizontalAlignment="Center" 
+                       TextAlignment="Center"
+                       FontSize="30"
+                       Margin="57,128,61,0" TextWrapping="Wrap" 
+                       VerticalAlignment="Top" Width="338"/>
+            <!--TextBlock para el resultado de la conversion a euros-->
             <TextBlock x:Name="Resultado" 
                        HorizontalAlignment="Center" Margin="23,165,21,0" TextWrapping="Wrap" 
                        Text="- €"
@@ -66,12 +60,6 @@
                        FontSize="70"
                        VerticalAlignment="Top" 
                        Height="100" Width="412"/>
-            <TextBlock x:Name="Libras"
-                       HorizontalAlignment="Center" 
-                       TextAlignment="Center"
-                       FontSize="30"
-                       Margin="57,128,61,0" TextWrapping="Wrap" 
-                       VerticalAlignment="Top" Width="338"/>
         </Grid>
     </Grid>
 
