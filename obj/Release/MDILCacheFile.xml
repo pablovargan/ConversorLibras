@@ -1,0 +1,15 @@
+﻿<xapCache source="C:\Users\Pablo\Desktop\Conversor\Conversor\Bin\Release\Conversor_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="30/07/2013 20:10:24">
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\obj\Release\Conversor.dll" archivePath="Conversor.dll" lastWriteTime="30/07/2013 20:10:23" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="29/07/2013 20:46:07" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="29/07/2013 20:46:07" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="29/07/2013 20:46:07" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="29/07/2013 20:46:07" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="29/07/2013 20:46:07" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="29/07/2013 20:46:07" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="29/07/2013 20:46:07" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Imagenes\splash_screen.png" archivePath="Imagenes\splash_screen.png" lastWriteTime="29/07/2013 23:19:45" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="30/07/2013 19:02:42" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Imagenes\logo_medium.png" archivePath="Imagenes\logo_medium.png" lastWriteTime="30/07/2013 18:42:38" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Imagenes\logo_small.png" archivePath="Imagenes\logo_small.png" lastWriteTime="29/07/2013 23:09:53" />
+  <file source="C:\Users\Pablo\Desktop\Conversor\Conversor\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="30/07/2013 19:02:42" />
+</xapCache>
