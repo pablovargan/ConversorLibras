@@ -39,7 +39,7 @@ namespace Conversor
                     /* Convierte en forma de cadena un numero con estilo y formato en un numero
                      * de punto flotante de doble equivalente con el formato que le hemos dicho
                      */
-                    Double.TryParse(this.Datos.Text, System.Globalization.NumberStyles.Currency, new CultureInfo("es-ES"), out valor); //Para el futuro converson serviria para el punto en-US
+                    Double.TryParse(this.Datos.Text, System.Globalization.NumberStyles.Currency, CultureInfo.CurrentCulture, out valor); //Para el futuro converson serviria para el punto en-US
                     // Vuelvo a dejar el textbox a vacio
                     this.Datos.Text = string.Empty;
                     // Conversion y redondeo a 2 decimales

@@ -18,3 +18,23 @@ C:\Users\Pablo\Desktop\Conversor\Conversor\obj\Release\Conversor.csproj.Generate
 C:\Users\Pablo\Desktop\Conversor\Conversor\obj\Release\Conversor.dll
 C:\Users\Pablo\Desktop\Conversor\Conversor\obj\Release\Conversor.pdb
 C:\Users\Pablo\Desktop\Conversor\Conversor\obj\Release\XapCacheFile.xml
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\Bin\Release\Assets\ApplicationIcon.png
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\Bin\Release\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\Bin\Release\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\Bin\Release\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\Bin\Release\Assets\Tiles\IconicTileSmall.png
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\Bin\Release\Conversor.dll
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\Bin\Release\Conversor.pdb
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\Bin\Release\AppManifest.xaml
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\Bin\Release\Properties\WMAppManifest.xml
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\Bin\Release\Conversor_Release_AnyCPU.xap
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\obj\Release\App.g.cs
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\obj\Release\ExtendedSplashScreen.g.cs
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\obj\Release\MainPage.g.cs
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\obj\Release\Conversor.g.resources
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\obj\Release\Conversor.Resources.AppResources.resources
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\obj\Release\Conversor.csproj.GenerateResource.Cache
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\obj\Release\Conversor.dll
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\obj\Release\Conversor.pdb
+C:\Users\Pablo\Documents\Visual Studio 2012\Projects\Conversor\Conversor\obj\Release\XapCacheFile.xml
