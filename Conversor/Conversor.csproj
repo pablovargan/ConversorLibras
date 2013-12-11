@@ -122,7 +122,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AppManifest.xml" />
+    <None Include="Conversor_2013_07_30_19_02_47.sap" />
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
@@ -147,12 +150,9 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Imagenes\Euro_ico.png" />
-    <Content Include="Imagenes\logo_medium2.png" />
+    <Content Include="Imagenes\logo_medium.png" />
     <Content Include="Imagenes\logo_small.png" />
     <Content Include="Imagenes\splash_screen.png" />
-    <Content Include="logo_casi.png" />
-    <Content Include="logo_medium2.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">

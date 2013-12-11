@@ -10,6 +10,7 @@ using Microsoft.Phone.Shell;
 using Conversor.Resources;
 
 using System.Windows.Media.Imaging;
+using System.Globalization;
 
 namespace Conversor
 {
@@ -24,29 +25,39 @@ namespace Conversor
             //BuildLocalizedApplicationBar();
         }
 
+        // Evento para realizar la conversion de euros a libras
         private void Convertir_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Datos.Text != "")
+            // Si es distinto de nulo o un espacio en blanco. Mejor que != "" <-- mas robusto
+            if(!String.IsNullOrWhiteSpace(this.Datos.Text))
             {
                 try
                 {
-                    char[] numero = this.Datos.Text.ToCharArray();
-                    //Busco la coma
-                    int coma = this.Datos.Text.IndexOf('.');
-                    if (coma != -1)
-                    {
-                        numero[coma] = ',';
-                    }
-                    string corregido = new string(numero);
-                    double valor = Convert.ToDouble(corregido);
-                    this.Datos.Text = "";
-                    this.Libras.Text = valor.ToString() + "£ =";
-                    double resultado = (valor * 1) / 0.826944;
-                    this.Resultado.Text = Math.Round(resultado, 2).ToString() + "€";
+                    // El string a interpretar esta en latino--> 12,23
+                    double valor;
+                    // TryParse(String, NumberStyle, IFormatProvider, Double) 
+                    /* Convierte en forma de cadena un numero con estilo y formato en un numero
+                     * de punto flotante de doble equivalente con el formato que le hemos dicho
+                     */
+                    CultureInfo aux = new CultureInfo(CultureInfo.CurrentCulture.ToString());
+                    MessageBox.Show(aux.ToString());
+                    Double.TryParse(this.Datos.Text, System.Globalization.NumberStyles.Currency, new CultureInfo("es-ES"), out valor); //Para el futuro converson serviria para el punto en-US
+                    // Vuelvo a dejar el textbox a vacio
+                    this.Datos.Text = string.Empty;
+                    // Conversion y redondeo a 2 decimales
+                    double resultado = Math.Round((valor * 1 / 0.83440), 2);
+
+                    // Se asigna al string el tipo de moneda que queremos en la salida y asi es controlado por el sistema
+                    // Libras
+                    var stringResultadoLibras = valor.ToString("C", new CultureInfo("en-GB")) + " =";
+                    this.Libras.Text = stringResultadoLibras;
+                    // Euros
+                    var stringResultadoEuros = resultado.ToString("C", new CultureInfo("es-ES"));
+                    this.Resultado.Text = stringResultadoEuros;
                 }
                 catch (FormatException fe)
                 {
-                    this.Datos.Text = "";
+                    this.Datos.Text = string.Empty;
                 }
                 
             }
@@ -58,20 +69,5 @@ namespace Conversor
         {
             Application.Current.Terminate();
         }
-        // Código de ejemplo para compilar una ApplicationBar traducida
-        //private void BuildLocalizedApplicationBar()
-        //{
-        //    // Establecer ApplicationBar de la página en una nueva instancia de ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
-
-        //    // Crear un nuevo botón y establecer el valor de texto en la cadena traducida de AppResources.
-        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-        //    appBarButton.Text = AppResources.AppBarButtonText;
-        //    ApplicationBar.Buttons.Add(appBarButton);
-
-        //    // Crear un nuevo elemento de menú con la cadena traducida de AppResources.
-        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
     }
 }
