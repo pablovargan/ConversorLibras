@@ -11,18 +11,50 @@ using Conversor.Resources;
 
 using System.Windows.Media.Imaging;
 using System.Globalization;
+using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization.Json;
+using Newtonsoft.Json;
 
 namespace Conversor
 {
+    public class Moneda
+    {
+        public string To { get; set; }
+        public double Rate { get; set; }
+        public string From { get; set; }
+        public string V { get; set; }
+    }
+
     public partial class MainPage : PhoneApplicationPage
     {
+        // URL para hacer la peticion GET
+        private static string urlRequest = "http://rate-exchange.appspot.com/currency?from=EUR&to=GBP&q=1";
+        private Moneda moneda;
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-
             // Código de ejemplo para traducir ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            // Realizo la descarga desde la web para recoger el Json
+            WebClient webClient = new WebClient();
+            webClient.DownloadStringCompleted += webClient_DownloadStringAsync;
+            webClient.DownloadStringAsync(new Uri(urlRequest));
+        }
+
+        public void webClient_DownloadStringAsync(object sender, DownloadStringCompletedEventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(e.Result))
+            {
+                // Parse del resultado obtenido (unico)
+                var resultado = JsonConvert.DeserializeObject<Moneda>(e.Result);
+                // Lo asigno a la moneda que tenemos
+                this.moneda = resultado;
+            }
         }
 
         // Evento para realizar la conversion de euros a libras
@@ -40,12 +72,11 @@ namespace Conversor
                      * de punto flotante de doble equivalente con el formato que le hemos dicho
                      */
                     CultureInfo aux = new CultureInfo(CultureInfo.CurrentCulture.ToString());
-                    MessageBox.Show(aux.ToString());
                     Double.TryParse(this.Datos.Text, System.Globalization.NumberStyles.Currency, new CultureInfo("es-ES"), out valor); //Para el futuro converson serviria para el punto en-US
                     // Vuelvo a dejar el textbox a vacio
                     this.Datos.Text = string.Empty;
                     // Conversion y redondeo a 2 decimales
-                    double resultado = Math.Round((valor * 1 / 0.83440), 2);
+                    double resultado = Math.Round((valor * 1 / moneda.Rate), 2);
 
                     // Se asigna al string el tipo de moneda que queremos en la salida y asi es controlado por el sistema
                     // Libras
@@ -59,9 +90,7 @@ namespace Conversor
                 {
                     this.Datos.Text = string.Empty;
                 }
-                
             }
-            
         }
 
         //Para que no vuelva al splash screen y termine
