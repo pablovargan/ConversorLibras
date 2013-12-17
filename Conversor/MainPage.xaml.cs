@@ -15,6 +15,8 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Json;
 using Newtonsoft.Json;
+// Estado de internet
+using Microsoft.Phone.Net.NetworkInformation;
 
 namespace Conversor
 {
@@ -40,10 +42,18 @@ namespace Conversor
         }
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-            // Realizo la descarga desde la web para recoger el Json
-            WebClient webClient = new WebClient();
-            webClient.DownloadStringCompleted += webClient_DownloadStringAsync;
-            webClient.DownloadStringAsync(new Uri(urlRequest));
+
+            if (NetworkInterface.GetIsNetworkAvailable())
+            {
+                // Realizo la descarga desde la web para recoger el Json
+                WebClient webClient = new WebClient();
+                webClient.DownloadStringCompleted += webClient_DownloadStringAsync;
+                webClient.DownloadStringAsync(new Uri(urlRequest));
+            }
+            else
+            {
+                this.moneda.Rate = 0.8440;
+            }
         }
 
         public void webClient_DownloadStringAsync(object sender, DownloadStringCompletedEventArgs e)
