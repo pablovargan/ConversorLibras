@@ -52,7 +52,8 @@ namespace Conversor
             }
             else
             {
-                this.moneda.Rate = 0.8440;
+                moneda = new Moneda();
+                moneda.Rate = 0.8440;
             }
         }
 
