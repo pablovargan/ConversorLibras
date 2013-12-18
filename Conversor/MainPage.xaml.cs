@@ -22,6 +22,7 @@ namespace Conversor
 {
     public class Moneda
     {
+        public Moneda() { }
         public string To { get; set; }
         public double Rate { get; set; }
         public string From { get; set; }
@@ -42,18 +43,14 @@ namespace Conversor
         }
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-
+            moneda = new Moneda();
+            moneda.Rate = 0.8440;
             if (NetworkInterface.GetIsNetworkAvailable())
             {
                 // Realizo la descarga desde la web para recoger el Json
                 WebClient webClient = new WebClient();
                 webClient.DownloadStringCompleted += webClient_DownloadStringAsync;
                 webClient.DownloadStringAsync(new Uri(urlRequest));
-            }
-            else
-            {
-                moneda = new Moneda();
-                moneda.Rate = 0.8440;
             }
         }
 
