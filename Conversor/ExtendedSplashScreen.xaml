@@ -13,6 +13,6 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="False">
 
-    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Imagenes/splash_screen.png"/>
+    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Imagenes/splash_screen2014.jpg"/>
 
 </phone:PhoneApplicationPage>
