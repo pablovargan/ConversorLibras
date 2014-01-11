@@ -155,6 +155,7 @@
     <Content Include="Imagenes\logo_mediumNavidadPNG.png" />
     <Content Include="Imagenes\logo_small.png" />
     <Content Include="Imagenes\logo_smallNavidadPNG.png" />
+    <Content Include="Imagenes\rateApp.png" />
     <Content Include="Imagenes\splash_screen.png" />
     <Content Include="Imagenes\splash_screen2014.jpg" />
     <Content Include="Imagenes\splash_screenNavidadPNG.png" />

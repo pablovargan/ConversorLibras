@@ -17,6 +17,7 @@ using System.Runtime.Serialization.Json;
 using Newtonsoft.Json;
 // Estado de internet
 using Microsoft.Phone.Net.NetworkInformation;
+using Microsoft.Phone.Tasks;
 
 namespace Conversor
 {
@@ -41,6 +42,7 @@ namespace Conversor
             // Código de ejemplo para traducir ApplicationBar
             //BuildLocalizedApplicationBar();
         }
+
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             moneda = new Moneda();
@@ -99,6 +101,13 @@ namespace Conversor
                     this.Datos.Text = string.Empty;
                 }
             }
+        }
+
+        // Evento para lanzar el market y valorar la app
+        private void RateApp_Click(object sender, EventArgs e)
+        {
+            MarketplaceReviewTask rate = new MarketplaceReviewTask();
+            rate.Show();
         }
 
         //Para que no vuelva al splash screen y termine
