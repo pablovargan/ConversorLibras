@@ -2,7 +2,7 @@
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="es-ES" />
   <App xmlns="" ProductID="{8db14df1-4e7d-47b9-8e7a-0c311557b66a}" Title="Conversor Libras" RuntimeType="Silverlight" Version="1.0.0.4" Genre="apps.normal" Author="Pablo Varela" Description="Conversor de libras a euros" Publisher="Pablo Varela" PublisherID="{5a8e433b-8d9b-43e8-bdfb-c8b8dea4fbb5}">
-    <IconPath IsRelative="true" IsResource="false">Imagenes\logo_mediumNavidadPNG.png</IconPath>
+    <IconPath IsRelative="true" IsResource="false">Imagenes\logo_medium.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
     </Capabilities>
@@ -12,9 +12,9 @@
     <Tokens>
       <PrimaryToken TokenID="ConversorToken" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Imagenes\logo_smallNavidadPNG.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">Imagenes\logo_small.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Imagenes\logo_mediumNavidadPNG.png</BackgroundImageURI>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Imagenes\logo_medium.png</BackgroundImageURI>
           <Title>a</Title>
           <BackContent>
           </BackContent>
