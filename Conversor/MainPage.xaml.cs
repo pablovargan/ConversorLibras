@@ -18,6 +18,7 @@ using Newtonsoft.Json;
 // Estado de internet
 using Microsoft.Phone.Net.NetworkInformation;
 using Microsoft.Phone.Tasks;
+using System.Reflection;
 
 namespace Conversor
 {
@@ -58,12 +59,15 @@ namespace Conversor
 
         public void webClient_DownloadStringAsync(object sender, DownloadStringCompletedEventArgs e)
         {
-            if (!String.IsNullOrWhiteSpace(e.Result))
+            if(!e.Cancelled && e.Error != null)
             {
-                // Parse del resultado obtenido (unico)
-                var resultado = JsonConvert.DeserializeObject<Moneda>(e.Result);
-                // Lo asigno a la moneda que tenemos
-                this.moneda = resultado;
+                if (!string.IsNullOrWhiteSpace(e.Result as string))
+                {
+                    // Parse del resultado obtenido (unico)
+                    var resultado = JsonConvert.DeserializeObject<Moneda>(e.Result);
+                    // Lo asigno a la moneda que tenemos
+                    this.moneda = resultado;
+                }
             }
         }
 

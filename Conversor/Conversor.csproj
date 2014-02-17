@@ -152,13 +152,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagenes\logo_medium.png" />
-    <Content Include="Imagenes\logo_mediumNavidadPNG.png" />
     <Content Include="Imagenes\logo_small.png" />
-    <Content Include="Imagenes\logo_smallNavidadPNG.png" />
     <Content Include="Imagenes\rateApp.png" />
     <Content Include="Imagenes\splash_screen.png" />
     <Content Include="Imagenes\splash_screen2014.jpg" />
-    <Content Include="Imagenes\splash_screenNavidadPNG.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
@@ -170,6 +167,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

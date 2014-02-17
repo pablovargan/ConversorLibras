@@ -1,26 +1,27 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="Conversor.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    x:Class="Conversor.MainPage"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
-    
+
     <!-- AppBar para realizar la review del conversor-->
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="False" Mode="Minimized">
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="False" Mode="Default">
             <shell:ApplicationBarIconButton x:Name="rateApp" Click="RateApp_Click" 
                                             IconUri="/Imagenes/rateApp.png" Text="Rate App"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
-    
+
     <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
     <Grid x:Name="LayoutRoot" Background="#3AFBEAEA">
         <Grid.RowDefinitions>
@@ -36,10 +37,9 @@
 
         <!--ContentPanel-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <!--TexBox donde se insertan los datos-->
-            <TextBox x:Name="Datos" 
-                     HorizontalAlignment="Left" Height="95" Margin="59,24,0,0" FontSize="45" 
-                     FlowDirection="RightToLeft" TextWrapping="NoWrap" VerticalAlignment="Top" Width="199">
+            <TextBox x:Name="Datos" MaxLength="7"
+				HorizontalAlignment="Left" Height="95" Margin="51,24,0,0" FontSize="45" 
+				FlowDirection="RightToLeft" TextWrapping="NoWrap" VerticalAlignment="Top" Width="216">
                 <!--La entrada del teclado sera tipo digital solo con los numeros-->
                 <TextBox.InputScope>
                     <InputScope>
@@ -49,25 +49,24 @@
             </TextBox>
             <!--Button con el evento para realizar la conversion-->
             <Button x:Name="Convertir" Content="Convertir" 
-                    HorizontalAlignment="Right" Margin="0,24,59,0" VerticalAlignment="Top" 
-                    Height="95" Width="153" 
-                    Click="Convertir_Click"/>
+				HorizontalAlignment="Right" Margin="0,25,46,0" VerticalAlignment="Top" 
+				Height="95" Width="153" 
+				Click="Convertir_Click"/>
             <!--TextBlock para el resultado en libras-->
             <TextBlock x:Name="Libras"
-                       HorizontalAlignment="Center" 
-                       TextAlignment="Center"
-                       FontSize="30"
-                       Margin="57,128,61,0" TextWrapping="Wrap" 
-                       VerticalAlignment="Top" Width="338"/>
-            <!--TextBlock para el resultado de la conversion a euros-->
+				HorizontalAlignment="Center" 
+				TextAlignment="Center"
+				FontSize="30"
+				Margin="57,128,61,0" TextWrapping="Wrap" 
+				VerticalAlignment="Top" Width="338"/>
             <TextBlock x:Name="Resultado" 
-                       HorizontalAlignment="Center" Margin="23,165,21,0" TextWrapping="Wrap" 
-                       Text="- €"
-                       TextAlignment="Center"
-                       Padding="10,0,10,0"
-                       FontSize="70"
-                       VerticalAlignment="Top" 
-                       Height="100" Width="412"/>
+				HorizontalAlignment="Center" Margin="10,165,10,0" TextWrapping="Wrap" 
+				Text="- €"
+				TextAlignment="Center"
+				Padding="10,0,10,0"
+				FontSize="60"
+				VerticalAlignment="Top" 
+				Height="100" Width="436"/>
         </Grid>
     </Grid>
 
