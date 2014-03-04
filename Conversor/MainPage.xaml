@@ -14,9 +14,14 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <!-- AppBar para realizar la review del conversor-->
+    <!-- AppBar -->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="False" Mode="Default">
+            <!-- Monedas from 
+            <shell:ApplicationBarIconButton x:Name="monedasTo" Click="MonedasFrom_Click"
+                                            IconUri="/Imagenes/rateApp.png" Text="From"/>
+            -->
+            <!-- Review del conversor -->
             <shell:ApplicationBarIconButton x:Name="rateApp" Click="RateApp_Click" 
                                             IconUri="/Imagenes/rateApp.png" Text="Rate App"/>
         </shell:ApplicationBar>
