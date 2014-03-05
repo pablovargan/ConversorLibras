@@ -5,6 +5,7 @@
     <IconPath IsRelative="true" IsResource="false">Imagenes\logo_medium.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="ExtendedSplashScreen.xaml" />

@@ -46,6 +46,8 @@ namespace Conversor
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
+            FlurryWP8SDK.Api.LogEvent("Aplicacion iniciada");
+
             moneda = new Moneda();
             moneda.Rate = 0.8440;
             if (NetworkInterface.GetIsNetworkAvailable())
@@ -103,6 +105,11 @@ namespace Conversor
                 catch (FormatException fe)
                 {
                     this.Datos.Text = string.Empty;
+                }
+                finally
+                {
+                    // Notifico que se ha realizado la conversion
+                    FlurryWP8SDK.Api.LogEvent("Conversion realizada");
                 }
             }
         }

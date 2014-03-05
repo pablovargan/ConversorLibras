@@ -56,17 +56,19 @@ namespace Conversor
             }
 
         }
-
+        // http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff817009%28v=vs.105%29.aspx
         // Código para ejecutar cuando la aplicación se inicia (p.ej. a partir de Inicio)
         // Este código no se ejecutará cuando la aplicación se reactive
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            FlurryWP8SDK.Api.StartSession(ConversorFlurry._flurryKey);
         }
 
         // Código para ejecutar cuando la aplicación se activa (se trae a primer plano)
         // Este código no se ejecutará cuando la aplicación se inicie por primera vez
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            FlurryWP8SDK.Api.StartSession(ConversorFlurry._flurryKey);
         }
 
         // Código para ejecutar cuando la aplicación se desactiva (se envía a segundo plano)
