@@ -35,7 +35,7 @@ namespace Conversor
     {
         // URL para hacer la peticion GET
         private static string urlRequest = "http://rate-exchange.appspot.com/currency?from=EUR&to=GBP&q=1";
-        private Moneda moneda;
+        private Moneda _moneda;
         // Constructor
         public MainPage()
         {
@@ -46,10 +46,10 @@ namespace Conversor
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
+            FlurryWP8SDK.Api.SetVersion("1.7");
             FlurryWP8SDK.Api.LogEvent("Aplicacion iniciada");
 
-            moneda = new Moneda();
-            moneda.Rate = 0.8440;
+            _moneda = new Moneda() { Rate = 0.8440 };
             if (NetworkInterface.GetIsNetworkAvailable())
             {
                 // Realizo la descarga desde la web para recoger el Json
@@ -68,7 +68,7 @@ namespace Conversor
                     // Parse del resultado obtenido (unico)
                     var resultado = JsonConvert.DeserializeObject<Moneda>(e.Result);
                     // Lo asigno a la moneda que tenemos
-                    this.moneda = resultado;
+                    this._moneda = resultado;
                 }
             }
         }
@@ -92,7 +92,7 @@ namespace Conversor
                     // Vuelvo a dejar el textbox a vacio
                     this.Datos.Text = string.Empty;
                     // Conversion y redondeo a 2 decimales
-                    double resultado = Math.Round((valor * 1 / moneda.Rate), 2);
+                    double resultado = Math.Round((valor * 1 / _moneda.Rate), 2);
 
                     // Se asigna al string el tipo de moneda que queremos en la salida y asi es controlado por el sistema
                     // Libras
@@ -117,6 +117,7 @@ namespace Conversor
         // Evento para lanzar el market y valorar la app
         private void RateApp_Click(object sender, EventArgs e)
         {
+            FlurryWP8SDK.Api.LogEvent("Evento de valorar la app");
             MarketplaceReviewTask rate = new MarketplaceReviewTask();
             rate.Show();
         }
