@@ -1,0 +1,12 @@
+﻿<Application
+    x:Class="ConversorLibrasWP81.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ConversorLibrasWP81"
+    xmlns:VMBase="using:ConversorLibrasWP81.ViewModels.Base">
+    
+    <Application.Resources>
+        <VMBase:ViewModelLocator x:Key="Locator"/>
+    </Application.Resources>
+
+</Application>

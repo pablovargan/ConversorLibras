@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversor", "Conversor\Conversor.csproj", "{8DB14DF1-4E7D-47B9-8E7A-0C311557B66A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversorLibrasWP81", "ConversorLibrasWP81\ConversorLibrasWP81.csproj", "{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,24 @@ Global
 		{8DB14DF1-4E7D-47B9-8E7A-0C311557B66A}.Release|x86.ActiveCfg = Release|x86
 		{8DB14DF1-4E7D-47B9-8E7A-0C311557B66A}.Release|x86.Build.0 = Release|x86
 		{8DB14DF1-4E7D-47B9-8E7A-0C311557B66A}.Release|x86.Deploy.0 = Release|x86
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Debug|ARM.ActiveCfg = Debug|ARM
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Debug|ARM.Build.0 = Debug|ARM
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Debug|ARM.Deploy.0 = Debug|ARM
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Debug|x86.ActiveCfg = Debug|x86
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Debug|x86.Build.0 = Debug|x86
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Debug|x86.Deploy.0 = Debug|x86
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Release|ARM.ActiveCfg = Release|ARM
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Release|ARM.Build.0 = Release|ARM
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Release|ARM.Deploy.0 = Release|ARM
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Release|x86.ActiveCfg = Release|x86
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Release|x86.Build.0 = Release|x86
+		{0DF35B6D-5182-42FE-AD01-9551F88A2FFF}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

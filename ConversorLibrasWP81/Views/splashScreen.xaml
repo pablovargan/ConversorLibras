@@ -1,0 +1,18 @@
+﻿<base:PageBase
+    x:Class="ConversorLibrasWP81.Views.SplashScreen"
+    xmlns:base="using:ConversorLibrasWP81.Views.Base"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ConversorLibrasWP81.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding SplashScreenViewModel, Source={StaticResource Locator}}">
+
+
+    <Grid>
+        <Image VerticalAlignment="Center" HorizontalAlignment="Center"
+               Source="/Assets/splash_screen.jpg" Margin="8,0,10,0" Width="382"/>
+    </Grid>
+</base:PageBase>
