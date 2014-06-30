@@ -89,6 +89,8 @@
             {
                 GetCurrency();
             }
+
+            GoogleAnalytics.EasyTracker.GetTracker().SendView("MainPage");
             return null;
         }
 

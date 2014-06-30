@@ -28,3 +28,4 @@ _ReSharper*/
 *.vssscc
 $tf*/
 /ConversorLibrasWP81/AppPackages/*
+/ConversorLibrasWP81/analytics.xml
