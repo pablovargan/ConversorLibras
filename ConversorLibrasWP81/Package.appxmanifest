@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="83231ecb-dfda-4822-9bff-9c51063b8f85" Publisher="CN=Pablo" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="83231ecb-dfda-4822-9bff-9c51063b8f85" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="7131PabloVarela.ConversorLibras" Publisher="CN=61C39055-1A61-498B-8756-76BA7E72532F" Version="1.1.0.2" />
+  <mp:PhoneIdentity PhoneProductId="1b2b11cd-02a2-4ef0-af2c-6390194ac769" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>ConversorLibrasWP81</DisplayName>
-    <PublisherDisplayName>Pablo</PublisherDisplayName>
+    <DisplayName>Conversor Libras</DisplayName>
+    <PublisherDisplayName>Pablo Varela</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -16,7 +16,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ConversorLibrasWP81.App">
-      <m3:VisualElements DisplayName="ConversorLibrasWP81" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="ConversorLibrasWP81" ForegroundText="light" BackgroundColor="transparent">
+      <m3:VisualElements DisplayName="Conversor Libras" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Conversor Libras" ForegroundText="light" BackgroundColor="transparent">
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
         </m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />

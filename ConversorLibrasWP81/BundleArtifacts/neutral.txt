@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Pablo\Documents\Visual Studio 2013\Projects\ConversorLibras\ConversorLibrasWP81\bin\Release\ConversorLibrasWP81_1.1.0.2_Bundle\ConversorLibrasWP81_1.1.0.2_AnyCPU.appx
+SymbolPackage=C:\Users\Pablo\Documents\Visual Studio 2013\Projects\ConversorLibras\ConversorLibrasWP81\AppPackages\ConversorLibrasWP81_1.1.0.2_Test\ConversorLibrasWP81_1.1.0.2_AnyCPU.appxsym

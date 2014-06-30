@@ -12,6 +12,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using System.Windows.Input;
+    using Windows.ApplicationModel.Store;
     using Windows.Web.Http;
 
     public class MainViewModel : ViewModelBase
@@ -20,6 +21,7 @@
         private DelegateCommand convertCommand;
         private string euro;
         private string to;
+        private DelegateCommandAsync rateCommand;
 
         private Money _money;
 
@@ -27,6 +29,7 @@
         {
             _money = new Money() { Rate = 0.8440 };
             this.convertCommand = new DelegateCommand(ConvertExecute, CanConvertExecute);
+            this.rateCommand = new DelegateCommandAsync(RateExecute);
         }
 
         public string From
@@ -63,6 +66,10 @@
                 this.to = value;
                 RaisePropertyChanged();
             }
+        }
+        public ICommand RateCommand
+        {
+            get { return this.rateCommand; }
         }
 
         public override Task OnNavigatedFrom(Windows.UI.Xaml.Navigation.NavigationEventArgs args)
@@ -114,6 +121,11 @@
             {
                 this.From = string.Empty;
             }
+        }
+
+        private async Task RateExecute()
+        {
+            await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store:reviewapp?appid=" + CurrentApp.AppId));
         }
 
         private async Task<string> DownloadCurrencyAsync()

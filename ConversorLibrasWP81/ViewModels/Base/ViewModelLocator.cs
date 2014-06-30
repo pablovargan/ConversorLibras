@@ -10,17 +10,11 @@ namespace ConversorLibrasWP81.ViewModels.Base
             container = new UnityContainer();
 
             container.RegisterType<MainViewModel>();
-            container.RegisterType<SplashScreenViewModel>();
         }
 
         public MainViewModel MainViewModel
         {
             get { return container.Resolve<MainViewModel>(); }
-        }
-
-        public SplashScreenViewModel SplashScreenViewModel
-        {
-            get { return container.Resolve<SplashScreenViewModel>(); }
         }
     }
 }
