@@ -82,16 +82,16 @@
             return null;
         }
 
-        public override Task OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs args)
+        public override async Task OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs args)
         {
             this.To = "- €";
             if (NetworkInterface.GetIsNetworkAvailable())
             {
-                GetCurrency();
+                var responseText = await DownloadCurrencyAsync();
+                _money = JsonConvert.DeserializeObject<Money>(responseText);
             }
 
             GoogleAnalytics.EasyTracker.GetTracker().SendView("MainPage");
-            return null;
         }
 
         private bool CanConvertExecute()
@@ -119,7 +119,7 @@
                 var stringResultEuro = result.ToString("C", new CultureInfo("es-ES"));
                 this.To = stringResultEuro;
             }
-            catch (FormatException fe)
+            catch (FormatException)
             {
                 this.From = string.Empty;
             }
@@ -135,12 +135,6 @@
             var httpClient = new HttpClient();
             HttpResponseMessage response = await httpClient.GetAsync(new Uri(CommonKeys.urlCurrency));
             return await response.Content.ReadAsStringAsync();
-        }
-
-        private async void GetCurrency()
-        {
-            var responseText = await DownloadCurrencyAsync();
-            _money = JsonConvert.DeserializeObject<Money>(responseText);
         }
     }
 }
