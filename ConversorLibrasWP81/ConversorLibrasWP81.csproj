@@ -85,8 +85,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Common\CommonKeys.cs" />
     <Compile Include="Models\Money.cs" />
+    <Compile Include="Services\Currency\CurrencyService.cs" />
+    <Compile Include="Services\Currency\ICurrencyService.cs" />
+    <Compile Include="Services\Network\INetworkService.cs" />
+    <Compile Include="Services\Network\NetworkService.cs" />
     <Compile Include="ViewModels\Base\DelegateCommandAsync.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,9 +151,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
