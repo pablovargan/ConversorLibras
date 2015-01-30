@@ -2,6 +2,7 @@
 {
     using ConversorLibrasWP81.ViewModels.Base;
     using Windows.UI.Xaml.Controls;
+    using Windows.UI.Xaml.Media.Animation;
     using Windows.UI.Xaml.Navigation;
 
     public class PageBase : Page
@@ -10,6 +11,12 @@
 
         public PageBase()
         {
+            Transitions = new TransitionCollection();
+            var theme = new NavigationThemeTransition
+            {
+                DefaultNavigationTransitionInfo = new SlideNavigationTransitionInfo()
+            };
+            Transitions.Add(theme);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

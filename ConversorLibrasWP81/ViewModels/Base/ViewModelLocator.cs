@@ -1,15 +1,17 @@
-﻿using Microsoft.Practices.Unity;
-namespace ConversorLibrasWP81.ViewModels.Base
+﻿namespace ConversorLibrasWP81.ViewModels.Base
 {
+    using Autofac;
+
     public class ViewModelLocator
     {
-        IUnityContainer container;
+        IContainer container;
 
         public ViewModelLocator()
         {
-            container = new UnityContainer();
+            var builder = new ContainerBuilder();
 
-            container.RegisterType<MainViewModel>();
+            builder.RegisterType<MainViewModel>();
+            this.container = builder.Build();
         }
 
         public MainViewModel MainViewModel

@@ -35,7 +35,7 @@
                      Text="{Binding From, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="45" 
                      FlowDirection="RightToLeft" MaxLength="7" InputScope="Number"
                      TextWrapping="NoWrap" VerticalAlignment="Top" Width="185"/>
-            <Button HorizontalAlignment="Stretch" Margin="220,32,33,0" VerticalAlignment="Top"
+            <Button HorizontalAlignment="Stretch" Margin="220,33,33,0" VerticalAlignment="Top"
                     Height="88" Content="Convertir" Command="{Binding ConvertCommand}" />
             <!-- To -->
             <TextBlock HorizontalAlignment="Center" Margin="17,172,21,0" TextWrapping="Wrap"

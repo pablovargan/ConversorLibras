@@ -46,8 +46,8 @@ namespace Conversor
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
-            FlurryWP8SDK.Api.SetVersion("1.7");
-            FlurryWP8SDK.Api.LogEvent("Aplicacion iniciada");
+            //FlurryWP8SDK.Api.SetVersion("1.7");
+            //FlurryWP8SDK.Api.LogEvent("Aplicacion iniciada");
 
             _moneda = new Moneda() { Rate = 0.8440 };
             if (NetworkInterface.GetIsNetworkAvailable())
@@ -109,7 +109,7 @@ namespace Conversor
                 finally
                 {
                     // Notifico que se ha realizado la conversion
-                    FlurryWP8SDK.Api.LogEvent("Conversion realizada");
+                    //FlurryWP8SDK.Api.LogEvent("Conversion realizada");
                 }
             }
         }
@@ -117,7 +117,7 @@ namespace Conversor
         // Evento para lanzar el market y valorar la app
         private void RateApp_Click(object sender, EventArgs e)
         {
-            FlurryWP8SDK.Api.LogEvent("Evento de valorar la app");
+            //FlurryWP8SDK.Api.LogEvent("Evento de valorar la app");
             MarketplaceReviewTask rate = new MarketplaceReviewTask();
             rate.Show();
         }

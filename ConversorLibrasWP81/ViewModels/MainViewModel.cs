@@ -5,25 +5,47 @@
     using ConversorLibrasWP81.ViewModels.Base;
     using Newtonsoft.Json;
     using System;
-    using System.Collections.Generic;
     using System.Globalization;
-    using System.Linq;
     using System.Net.NetworkInformation;
-    using System.Text;
     using System.Threading.Tasks;
     using System.Windows.Input;
     using Windows.ApplicationModel.Store;
+    using Windows.UI.Xaml.Navigation;
     using Windows.Web.Http;
 
     public class MainViewModel : ViewModelBase
     {
+        // Services
+        private Money _money;
+
         private string from;
-        private DelegateCommand convertCommand;
         private string euro;
         private string to;
+
+        // Commands
+        private DelegateCommand convertCommand;
         private DelegateCommandAsync rateCommand;
 
-        private Money _money;
+        public override async Task OnNavigatedTo(NavigationEventArgs args)
+        {
+            this.To = "- €";
+            if (NetworkInterface.GetIsNetworkAvailable())
+            {
+                var responseText = await DownloadCurrencyAsync();
+                _money = JsonConvert.DeserializeObject<Money>(responseText);
+            }
+
+            GoogleAnalytics.EasyTracker.GetTracker().SendView("MainPage");
+        }
+        public override Task OnNavigatedFrom(NavigationEventArgs args)
+        {
+            return null;
+        }
+
+        public override Task OnNavigatingFrom(NavigatingCancelEventArgs args)
+        {
+            return null;
+        }
 
         public MainViewModel() 
         {
@@ -41,11 +63,6 @@
                 RaisePropertyChanged();
                 this.convertCommand.RaiseCanExecuteChanged();
             }
-        }
-
-        public ICommand ConvertCommand
-        {
-            get { return this.convertCommand; }
         }
 
         public string Euro
@@ -72,28 +89,10 @@
             get { return this.rateCommand; }
         }
 
-        public override Task OnNavigatedFrom(Windows.UI.Xaml.Navigation.NavigationEventArgs args)
+        public ICommand ConvertCommand
         {
-            return null;
+            get { return this.convertCommand; }
         }
-
-        public override Task OnNavigatingFrom(Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs args)
-        {
-            return null;
-        }
-
-        public override async Task OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs args)
-        {
-            this.To = "- €";
-            if (NetworkInterface.GetIsNetworkAvailable())
-            {
-                var responseText = await DownloadCurrencyAsync();
-                _money = JsonConvert.DeserializeObject<Money>(responseText);
-            }
-
-            GoogleAnalytics.EasyTracker.GetTracker().SendView("MainPage");
-        }
-
         private bool CanConvertExecute()
         {
             return !string.IsNullOrWhiteSpace(this.from);
